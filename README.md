@@ -1,4 +1,4 @@
-# Custom Webpack React build
+# Custom Webpack React + `Redux` build
 
 * webpack
 * react
@@ -7,3 +7,4 @@
 	* autoprefixer
 	* cssnano
 * babel
+* redux + react-redux + HMR
