@@ -35,7 +35,12 @@
   },
   "browserslist": "> 5%",
   "dependencies": {
+    "connected-react-router": "^6.3.0",
+    "history": "^4.7.2",
     "react-redux": "^6.0.0",
-    "redux": "^4.0.1"
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
   }
 }

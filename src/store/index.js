@@ -1,10 +1,21 @@
-import { createStore } from 'redux'
-import rootReducer from '../reducers/index'
+import { createStore, applyMiddleware } from 'redux'
+import { createBrowserHistory } from 'history'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import createRootReducer from '../reducers/index'
+import { routerMiddleware } from 'connected-react-router'
+import thunk from 'redux-thunk'
+
+export const history = createBrowserHistory()
 
 export const configStore = () => {
 	const store = createStore(
-    rootReducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    createRootReducer(history),
+    composeWithDevTools(
+      applyMiddleware(
+        routerMiddleware(history),
+        thunk
+      )
+    )
   )
 
 	if (process.env.NODE_ENV !== 'production') {
