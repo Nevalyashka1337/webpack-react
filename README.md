@@ -1,4 +1,4 @@
-# Custom Webpack React + `Redux` build
+# Custom Webpack React + `Redux & Router` build
 
 * webpack
 * react
@@ -7,4 +7,5 @@
 	* autoprefixer
 	* cssnano
 * babel
-* redux + react-redux + HMR
+* redux + react-redux + redux-thunk + HMR
+* react-router-dom + sync with redux
